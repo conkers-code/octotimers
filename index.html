@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octo WoW Timers | Raid & BG Countdowns</title>
+    <meta name="description"
+        content="A lightweight countdown site for raid resets, battleground rotations, and world events on Octo WoW. Stay ahead of the reset.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="assets/logo.png" alt="Octo WoW" style="width: 100px; height: 100px; border-radius: 8px;">
+                    <h1>Octo WoW Timers</h1>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#raid-timers">Raid Timers</a>
+                <a href="#world-events" style="margin-left: 1.5rem;">World Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="timer-grid" id="raid-timers">
+            <!-- Raid 40 -->
+            <div class="timer-card">
+                <img src="assets/mc.jpg" alt="Raid 40">
+                <div class="card-content">
+                    <div class="subtitle">MC / BWL / AQ40 / Naxx / ES</div>
+                    <h3>Raid 40</h3>
+                    <div class="reset-info">Resets every 7 days</div>
+                    <div class="countdown" id="raid40-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="raid40-date">Resets: -- ---</div>
+                </div>
+            </div>
+
+            <!-- Onyxia -->
+            <div class="timer-card">
+                <img src="assets/ony.jpg" alt="Onyxia">
+                <div class="card-content">
+                    <div class="subtitle">Lair of the Broodmother</div>
+                    <h3>Onyxia</h3>
+                    <div class="reset-info">Resets every 5 days</div>
+                    <div class="countdown" id="onyxia-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="onyxia-date">Resets: -- ---</div>
+                </div>
+            </div>
+
+            <!-- Karazhan -->
+            <div class="timer-card">
+                <img src="assets/kara.jpg" alt="Karazhan">
+                <div class="card-content">
+                    <div class="subtitle">The Ivory Tower</div>
+                    <h3>Karazhan</h3>
+                    <div class="reset-info">Resets every 5 days</div>
+                    <div class="countdown" id="karazhan-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="karazhan-date">Resets: -- ---</div>
+                </div>
+            </div>
+
+            <!-- Raid 20 -->
+            <div class="timer-card">
+                <img src="assets/aq20.jpg" alt="Raid 20">
+                <div class="card-content">
+                    <div class="subtitle">ZG / AQ20</div>
+                    <h3>Raid 20</h3>
+                    <div class="reset-info">Resets every 3 days</div>
+                    <div class="countdown" id="raid20-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="raid20-date">Resets: -- ---</div>
+                </div>
+            </div>
+
+            <!-- Timbermaw Hold -->
+            <div class="timer-card">
+                <img src="assets/tmhold.jpg" alt="Timbermaw">
+                <div class="card-content">
+                    <div class="subtitle">Timbermaw Hold</div>
+                    <h3>Timbermaw</h3>
+                    <div class="reset-info">Resets every 7 days</div>
+                    <div class="countdown" id="timbermaw-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="timbermaw-date">Resets: -- ---</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer-grid wide-grid" id="world-events">
+            <!-- Battleground -->
+            <a href="bg-schedule.html" class="timer-card schedule-card">
+                <img src="assets/pvp.jpg" alt="Battleground">
+                <div class="card-content">
+                    <div class="subtitle">BG of the Day</div>
+                    <h3 id="bg-name">Loading...</h3>
+                    <div class="reset-info">Resets Daily</div>
+                    <div class="countdown" id="bg-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="bg-date">Resets: -- ---</div>
+                    <div id="bg-next" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.875rem;">Next: ...
+                    </div>
+                    <div class="schedule-footer">Click for 7-day schedule</div>
+                </div>
+            </a>
+
+            <!-- Honor Reset -->
+            <div class="timer-card">
+                <img src="assets/honorreset.jpeg" alt="Honor Reset">
+                <div class="card-content">
+                    <div class="subtitle">Rank Progression</div>
+                    <h3>Honor Reset</h3>
+                    <div class="reset-info">Resets every 7 days</div>
+                    <div class="countdown" id="honor-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="honor-date">Resets: -- ---</div>
+                </div>
+            </div>
+
+            <!-- Darkmoon Faire -->
+            <a href="dmf-schedule.html" class="timer-card schedule-card">
+                <img src="assets/darkmoon.webp" alt="Darkmoon Faire">
+                <div class="card-content">
+                    <div class="subtitle">Faire Location</div>
+                    <h3 id="dmf-name">Loading...</h3>
+                    <div class="reset-info">Moves every Sunday</div>
+                    <div class="countdown" id="dmf-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="dmf-date">Resets: -- ---</div>
+                    <div class="schedule-footer" style="margin-top: 2rem;">Click for schedule</div>
+                </div>
+            </a>
+
+            <!-- Weekly Quests -->
+            <div class="timer-card">
+                <img src="assets/questsreset.jpg" alt="Weekly Quests">
+                <div class="card-content">
+                    <div class="subtitle">Quest Reset</div>
+                    <h3>Weekly Quests</h3>
+                    <div class="reset-info">Resets every 7 days</div>
+                    <div class="countdown" id="weeklyQuests-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="weeklyQuests-date">Resets: -- ---</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edge of Madness -->
+        <div class="timer-grid" style="margin-top: 1.5rem;">
+            <div class="timer-card" style="grid-column: 1 / -1;">
+                <img src="assets/eom.jpg" alt="Edge of Madness">
+                <div class="card-content">
+                    <div class="subtitle">Zul'Gurub Edge of Madness</div>
+                    <h3 id="eom-name">Loading...</h3>
+                    <div class="reset-info">Rotates every 14 days</div>
+                    <div class="countdown" id="eom-timer">
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Hours</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-value">0</span><span
+                                class="countdown-label">Sec</span></div>
+                    </div>
+                    <div class="reset-date" id="eom-date">Resets: -- ---</div>
+                    <div id="eom-next" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.875rem;">Next
+                        boss: ...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://octowow.st" target="_blank">Octo WoW Website</a>
+            <a href="https://discord.gg/octowowfans" target="_blank">Join Community Discord</a>
+            <a href="https://github.com/witchysofia/octotimers" target="_blank">Source Code</a>
+        </div>
+        <div class="footer-bottom">
+            <p>Have any issues or questions? <a href="https://discordapp.com/users/234861338432765952" target="_blank">Contact me on Discord by clicking here</a> | Not affiliated with Octo WoW or Blizzard Entertainment.</p>
+            <p style="opacity: 0.5; font-size: 0.7rem; max-width: 800px;">
+                All World of Warcraft images and assets are trademarks and/or copyrights of Blizzard Entertainment. This site does not claim ownership over them.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
