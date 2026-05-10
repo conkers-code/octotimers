@@ -62,16 +62,27 @@ function updateTimers() {
 
         const container = document.getElementById(`${event.id}-timer`);
         if (container) {
+            const items = container.querySelectorAll('.countdown-item');
             const values = container.querySelectorAll('.countdown-value');
-            if (values.length === 4) {
+            
+            if (items.length === 4) {
                 values[0].textContent = time.days;
                 values[1].textContent = time.hours;
                 values[2].textContent = time.mins;
                 values[3].textContent = time.secs;
-            } else if (values.length === 3) {
-                values[0].textContent = time.hours + (time.days * 24);
+
+                // Hide days if 0
+                items[0].style.display = time.days > 0 ? 'flex' : 'none';
+                // Hide hours if 0 AND days are also 0
+                items[1].style.display = (time.hours > 0 || time.days > 0) ? 'flex' : 'none';
+            } else if (items.length === 3) {
+                const displayHours = time.hours + (time.days * 24);
+                values[0].textContent = displayHours;
                 values[1].textContent = time.mins;
                 values[2].textContent = time.secs;
+
+                // Hide hours if 0
+                items[0].style.display = displayHours > 0 ? 'flex' : 'none';
             }
         }
 
