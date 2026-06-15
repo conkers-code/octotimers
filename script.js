@@ -1,5 +1,5 @@
 const REFERENCE_DATES = {
-    raid40: '12/06/2026 04:00:00',
+    raid40: '10/06/2026 02:00:00',
     onyxia: '13/06/2026 04:00:00',
     karazhan: '13/06/2026 04:00:00',
     raid20: 'inactive',
